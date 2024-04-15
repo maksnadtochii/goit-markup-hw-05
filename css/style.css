@@ -538,7 +538,6 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
 .footer-form {
     display: flex;
     gap: 24px;
-    margin-left: 80px;
 }
 
 .footer-text-sub {
@@ -548,7 +547,6 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     letter-spacing: 0.02em;
     color: #fff;
     margin-bottom: 16px;
-  margin-left: 80px;
 }
 
 .footer-lable-email {
@@ -610,6 +608,21 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     margin-left: 16px;
 }
 /* ------------------------------------ */
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+
 .backdrop {
     position: fixed;
     top: 0;
@@ -692,9 +705,7 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     letter-spacing: 0.02em;
     text-align: center;
     color: #2e2f42;
-    margin-bottom: 16px;
-    padding-top: 72px;
-    
+    margin-bottom: 16px;   
 }
 
 .modal-input {
@@ -702,7 +713,7 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     height: 40px;
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 4px;
-    margin-bottom: 8px;
+    font-size: 12px;
     background-color: transparent;
     padding-left: 38px;
     outline: transparent;
@@ -738,6 +749,11 @@ font-weight: 500;
     border: none;
     border-radius: 4px;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-btn-send:hover,
+.modal-btn-send:focus {
+    background-color: #404bbf;
 }
 
 .modal-input-conteiner{
@@ -816,12 +832,18 @@ input:focus-within {
         fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+
+
 .check-text {
     font-weight: 400;
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.04em;
     color: #8e8f99;
+}
+
+.modal-check:focus+.check-text span {
+    border-color: #4D5AE5;
 }
 
 .modal-icon-wrap {
